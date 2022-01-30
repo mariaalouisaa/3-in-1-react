@@ -1,0 +1,31 @@
+.Home {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 28em;
+}
+
+.Home > button {
+  height: 7em;
+  width: 7em;
+  margin: 1em;
+  border-radius: 50%;
+  border: 0.5em solid rgba(66, 66, 66, 0.945);
+  transition: transform 0.2s;
+  font-weight: 700;
+  letter-spacing: 1px;
+  font-size: 16px;
+}
+
+.Home > button:hover {
+  transform: scale(1.2);
+}
+
+.popup {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
