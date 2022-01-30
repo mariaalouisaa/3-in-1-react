@@ -1,19 +1,22 @@
 import "./Stopwatch.css";
+import start from "./images/play.png";
+import stop from "./images/pause.png";
+import cancel from "./images/cancel.png";
 
 export default function Stopwatch(props) {
   if (props.active) {
     return (
       <div className="Stopwatch popup">
         <p>STOPWATCH</p>
-        <p>00:00:00</p>
+        <p className="timer">00:00:00</p>
         <button onclick="start()" className="play">
-          <i class="fas fa-play"></i>
+          <img src={start} />
         </button>
         <button onclick="stop()" className="stop">
-          <i class="fas fa-pause"></i>
+          <img src={stop} />
         </button>
         <button onclick="reset()" className="reset">
-          <i class="fas fa-times"></i>
+          <img src={cancel} />
         </button>
       </div>
     );

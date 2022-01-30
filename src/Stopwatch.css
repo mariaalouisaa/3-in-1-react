@@ -5,10 +5,25 @@
   border-radius: 20px;
 }
 
+.timer {
+  font-size: 3em;
+  font-weight: 700;
+  letter-spacing: 3px;
+  margin: 0.5em;
+}
+
+img {
+  width: 4em;
+}
+
 .Stopwatch > button {
-  width: 5em;
-  height: 5em;
   border-radius: 50%;
   border: none;
   margin: 1em;
+  background: none;
+  cursor: pointer;
+}
+
+.Stopwatch > button:hover {
+  transform: scale(1.2);
 }
