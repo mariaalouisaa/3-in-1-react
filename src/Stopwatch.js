@@ -7,15 +7,17 @@ import "./Stopwatch.css";
 export default function Stopwatch(props) {
   const [timer, setTimer] = useState("00:00:00");
   const [active, setActive] = useState(false);
-
   let [milliseconds, seconds, minutes] = [0, 0, 0];
+
   let int = useRef(0);
 
   function startTimer() {
+    console.log(milliseconds);
     if (!active) int.current = setInterval(() => showTime(), 10);
   }
 
   function stopTimer() {
+    setActive(false);
     clearInterval(int.current);
   }
 
