@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import start from "./images/play.png";
 import stop from "./images/pause.png";
 import reset from "./images/cancel.png";
@@ -8,20 +8,20 @@ export default function Stopwatch(props) {
   const [timer, setTimer] = useState("00:00:00");
 
   let [milliseconds, seconds, minutes] = [0, 0, 0];
-  let int = 0;
+  let int = useRef(0);
 
   function startTimer() {
-    int = setInterval(() => showTime(), 10);
+    int.current = setInterval(() => showTime(), 10);
   }
 
   function stopTimer() {
     console.log("stop");
-    clearInterval(int);
+    clearInterval(int.current);
   }
 
   function resetTimer() {
     console.log("reset");
-    clearInterval(int);
+    clearInterval(int.current);
     [milliseconds, seconds, minutes] = [0, 0, 0];
     setTimer("00:00:00");
   }
