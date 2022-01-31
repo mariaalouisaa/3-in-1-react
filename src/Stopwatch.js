@@ -6,27 +6,28 @@ import "./Stopwatch.css";
 
 export default function Stopwatch(props) {
   const [timer, setTimer] = useState("00:00:00");
+  const [active, setActive] = useState(false);
 
   let [milliseconds, seconds, minutes] = [0, 0, 0];
   let int = useRef(0);
 
   function startTimer() {
-    int.current = setInterval(() => showTime(), 10);
+    if (!active) int.current = setInterval(() => showTime(), 10);
   }
 
   function stopTimer() {
-    console.log("stop");
     clearInterval(int.current);
   }
 
   function resetTimer() {
-    console.log("reset");
+    setActive(false);
     clearInterval(int.current);
     [milliseconds, seconds, minutes] = [0, 0, 0];
     setTimer("00:00:00");
   }
 
   function showTime() {
+    setActive(true);
     milliseconds += 10;
 
     if (milliseconds === 1000) {
