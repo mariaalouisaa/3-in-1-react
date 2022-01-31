@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import start from "./images/play.png";
 import stop from "./images/pause.png";
 import reset from "./images/cancel.png";
@@ -29,11 +29,11 @@ export default function Stopwatch(props) {
   function showTime() {
     milliseconds += 10;
 
-    if (milliseconds == 1000) {
+    if (milliseconds === 1000) {
       milliseconds = 0;
       seconds++;
 
-      if (seconds == 60) {
+      if (seconds === 60) {
         seconds = 0;
         minutes++;
       }
@@ -52,13 +52,13 @@ export default function Stopwatch(props) {
         <p>STOPWATCH</p>
         <p className="timer">{timer}</p>
         <button onClick={startTimer} className="play">
-          <img src={start} />
+          <img src={start} alt="start" />
         </button>
         <button onClick={stopTimer} className="stop">
-          <img src={stop} />
+          <img src={stop} alt="pause" />
         </button>
         <button onClick={resetTimer} className="reset">
-          <img src={reset} />
+          <img src={reset} alt="reset" />
         </button>
       </div>
     );

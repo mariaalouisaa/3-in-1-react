@@ -10,8 +10,8 @@ export default function Home() {
       <button>To-do {<br />}List</button>
       <button>Stop- watch</button>
       <Date active={false} />
-      <Todo active={false} />
-      <Stopwatch active={true} />
+      <Todo active={true} />
+      <Stopwatch active={false} />
     </div>
   );
 }
