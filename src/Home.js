@@ -38,7 +38,7 @@ export default function Home() {
           Stop- watch
         </button>
         <Date active={dateVis} />
-        <Todo active={todoVis} />
+        <Todo active={true} />
         <Stopwatch active={stopVis} />
       </div>
     </div>
