@@ -1,6 +1,6 @@
 import "./Home.css";
 import home from "./images/home.png";
-import Date from "./Date";
+import TimeAndDate from "./TimeAndDate";
 import Todo from "./Todo";
 import Stopwatch from "./Stopwatch";
 import { useState } from "react/cjs/react.development";
@@ -37,8 +37,8 @@ export default function Home() {
         <button name="stop" onClick={popUp}>
           Stop- watch
         </button>
-        <Date active={dateVis} />
-        <Todo active={true} />
+        <TimeAndDate active={dateVis} />
+        <Todo active={todoVis} />
         <Stopwatch active={stopVis} />
       </div>
     </div>
