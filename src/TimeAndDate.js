@@ -11,21 +11,21 @@ export default function TimeAndDate(props) {
   if (props.active) {
     return (
       <div className="Date popup">
-        <p>TODAYS DATE WILL GO HERE</p>
-        <p>
+        <p className="TodayDate">
           {" "}
           {dateState.toLocaleDateString("en-GB", {
+            weekday: "long",
             day: "numeric",
-            month: "short",
+            month: "long",
             year: "numeric",
           })}
         </p>
-        <p>THE TIME WILL GO HERE HH:MM:SS</p>
-        <p>
-          {dateState.toLocaleString("en-US", {
+        <p className="TodayTime">
+          {dateState.toLocaleString("en-GB", {
             hour: "numeric",
             minute: "numeric",
-            hour12: true,
+            second: "numeric",
+            hour12: false,
           })}
         </p>
       </div>
