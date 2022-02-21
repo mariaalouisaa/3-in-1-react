@@ -16,15 +16,16 @@ export default function Home() {
     if (e.target.name === "stop") setsetStopvis(true);
   }
 
-  resetHome = () => {
-    setsetDatevis(false);
-    setsetTodovis(false);
-    setsetStopvis(false);
-  };
-
   return (
     <div>
-      <button onClick={resetHome} className="homebutton">
+      <button
+        onClick={() => {
+          setsetDatevis(false);
+          setsetTodovis(false);
+          setsetStopvis(false);
+        }}
+        className="homebutton"
+      >
         <img src={home} alt={home} />
       </button>
       <div className="Home">
