@@ -5,6 +5,7 @@ export default function Todo(props) {
     function handleSubmit(e) {
       e.preventDefault();
       let text = e.target.input.value;
+      console.log(text);
     }
 
     return (
