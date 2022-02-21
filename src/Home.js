@@ -16,11 +16,11 @@ export default function Home() {
     if (e.target.name === "stop") setsetStopvis(true);
   }
 
-  function resetHome() {
+  resetHome = () => {
     setsetDatevis(false);
     setsetTodovis(false);
     setsetStopvis(false);
-  }
+  };
 
   return (
     <div>
