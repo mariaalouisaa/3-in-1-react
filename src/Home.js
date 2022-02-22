@@ -3,7 +3,7 @@ import home from "./images/home.png";
 import TimeAndDate from "./TimeAndDate";
 import Todo from "./Todo";
 import Stopwatch from "./Stopwatch";
-import { useState } from "react/cjs/react.development";
+import React, { useState } from "react";
 
 export default function Home() {
   const [dateVis, setsetDatevis] = useState(false);
