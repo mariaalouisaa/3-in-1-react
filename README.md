@@ -25,7 +25,7 @@
 - [ ] Add functionality for stopwatch to pause
 
 
-**Extra notes:** I originaly made this in Vanilla JS [(check it out here)](https://github.com/mariaalouisaa/3-in-1-vanilla-js-) and am really enjoying how differnct the code is between the two versions!
+**Extra notes:** I originaly made this in Vanilla JS [(check it out here)](https://github.com/mariaalouisaa/3-in-1-vanilla-js-) and am really enjoying how different the code is between the two versions!
 
 
 *App designed, coded and maintained entirely by myself!*
