@@ -1,11 +1,17 @@
+import React, { useState } from "react";
+import ReactDOM from "react-dom";
 import "./Todo.css";
 
 export default function Todo(props) {
   if (props.active) {
     function handleSubmit(e) {
       e.preventDefault();
-      let text = e.target.input.value;
-      console.log(text);
+      addItem(e.target.input.value);
+    }
+
+    function addItem(item) {
+      let listItem = React.createElement("ul", {}, item);
+      ReactDOM.render(listItem, document.querySelector(".list"));
     }
 
     return (
@@ -16,6 +22,7 @@ export default function Todo(props) {
           <br />
           <input type="text" name="input" autoComplete="off" />
           <input type="submit" value="+" />
+          <div className="list"></div>
         </form>
       </div>
     );
