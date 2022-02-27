@@ -1,8 +1,11 @@
-import React from "react";
-import ReactDOM from "react-dom";
+import React, { useState } from "react";
+import data from "./todo.json";
 import "./Todo.css";
 
 export default function Todo(props) {
+  const [toDoList, setToDoList] = useState(data);
+  const [active, setActive] = useState("false");
+
   if (props.active) {
     function handleSubmit(e) {
       e.preventDefault();
@@ -10,9 +13,12 @@ export default function Todo(props) {
     }
 
     function addItem(item) {
-      let listItem = React.createElement("ul", {}, item);
-      ReactDOM.render(listItem, document.querySelector(".list"));
+      setToDoList([...toDoList, item]);
     }
+
+    const handleToggle = () => {
+      setActive(!active);
+    };
 
     return (
       <div className="Todo popup">
@@ -22,7 +28,19 @@ export default function Todo(props) {
           <br />
           <input type="text" name="input" autoComplete="off" />
           <input type="submit" value="+" />
-          <div className="list"></div>
+          <div className="list">
+            {toDoList.map((item, index) => {
+              return (
+                <p
+                  key={index}
+                  className={active ? null : "Strike"}
+                  onClick={handleToggle}
+                >
+                  {item}
+                </p>
+              );
+            })}
+          </div>
         </form>
       </div>
     );
