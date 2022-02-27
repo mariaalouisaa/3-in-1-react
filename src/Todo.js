@@ -1,10 +1,10 @@
 import React, { useState } from "react";
-import ReactDOM from "react-dom";
 import data from "./todo.json";
 import "./Todo.css";
 
 export default function Todo(props) {
   const [toDoList, setToDoList] = useState(data);
+  const [active, setActive] = useState("false");
 
   if (props.active) {
     function handleSubmit(e) {
@@ -16,6 +16,10 @@ export default function Todo(props) {
       setToDoList([...toDoList, item]);
     }
 
+    const handleToggle = () => {
+      setActive(!active);
+    };
+
     return (
       <div className="Todo popup">
         <p>TO DO LIST</p>
@@ -26,7 +30,15 @@ export default function Todo(props) {
           <input type="submit" value="+" />
           <div className="list">
             {toDoList.map((item, index) => {
-              return <p key={index}>{item}</p>;
+              return (
+                <p
+                  key={index}
+                  className={active ? null : "Strike"}
+                  onClick={handleToggle}
+                >
+                  {item}
+                </p>
+              );
             })}
           </div>
         </form>
