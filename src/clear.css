@@ -1,0 +1,8 @@
+.Clear {
+    margin: 10px auto;
+    font-size: 16px;
+    padding: 5px 10px;
+    border-radius: 20px;
+    border: solid 2px grey;
+    cursor: pointer;
+}
