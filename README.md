@@ -13,9 +13,9 @@
 
 ## Features:
 
-- React hooks such as useState and useEffect
-- setInterval() 
-- Date() toLocaleString()
+- 🤖 React hooks such as useState and useEffect
+- ⏰ setInterval() 
+- 🗓️ Date() toLocaleString()
 
 --- 
 
@@ -23,6 +23,9 @@
 - [ ] The to-do list component (which will save data to localStorage)
 - [ ] Refine the CSS on all components!
 - [ ] Add functionality for stopwatch to pause
+- [ ] Accesability tests
+- [ ] Ensure the appliction is responsive across different sceen sizes 
+- [ ] Unit & Integration tests
 
 
 **Extra notes:** I originaly made this in Vanilla JS [(check it out here)](https://github.com/mariaalouisaa/3-in-1-vanilla-js-) and am really enjoying how different the code is between the two versions!
