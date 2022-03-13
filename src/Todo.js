@@ -10,7 +10,7 @@ export default function Todo(props) {
   if (props.active) {
     function handleSubmit(e) {
       e.preventDefault();
-      addItem(e.target.input.value);
+      if(e.target.input.value.length > 1) addItem(e.target.input.value);
     }
 
     function addItem(item) {
