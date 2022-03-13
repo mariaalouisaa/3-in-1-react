@@ -13,3 +13,14 @@
   display: flex;
   justify-content: space-between;
 }
+
+.Delete {
+  height: 2.5em;
+  width: 2.5em;
+  background-color: transparent;
+  border: solid 2px rgb(73, 73, 73);
+}
+
+.Delete:hover {
+  background-color: rgb(233, 61, 61);
+}
