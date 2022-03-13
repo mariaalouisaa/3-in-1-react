@@ -16,7 +16,8 @@ export default function Todo(props) {
       setToDoList([...toDoList, item]);
     }
 
-    const handleToggle = () => {
+    const handleToggle = (e) => {
+      console.log(e.target)
       setActive(!active);
     };
 
@@ -31,13 +32,16 @@ export default function Todo(props) {
           <div className="list">
             {toDoList.map((item, index) => {
               return (
+                <div key={`d${index}`} className={"Flex"}>
                 <p
-                  key={index}
+                  key={`p${index}`}
                   className={active ? null : "Strike"}
                   onClick={handleToggle}
                 >
                   {item}
                 </p>
+                <button key={`b${index}`} className={"Delete"}>X</button>
+                </div>
               );
             })}
           </div>

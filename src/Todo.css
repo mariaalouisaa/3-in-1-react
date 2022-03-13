@@ -6,3 +6,10 @@
 .Strike {
   text-decoration: line-through;
 }
+
+.Flex {
+  margin: 0 auto;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+}
