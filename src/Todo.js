@@ -21,6 +21,10 @@ export default function Todo(props) {
       setActive(!active);
     };
 
+    const deleteItem = (e) => {
+    e.target.parentElement.remove();
+    }
+
     return (
       <div className="Todo popup">
         <p>TO DO LIST</p>
@@ -40,7 +44,7 @@ export default function Todo(props) {
                 >
                   {item}
                 </p>
-                <button key={`b${index}`} className={"Delete"}>X</button>
+                <button key={`b${index}`} className={"Delete"} onClick={deleteItem}>X</button>
                 </div>
               );
             })}
