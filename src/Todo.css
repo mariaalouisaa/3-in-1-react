@@ -14,14 +14,21 @@
   justify-content: space-between;
 }
 
-.Delete {
+.Delete,
+.Edit {
   height: 2.5em;
   width: 2.5em;
   background-color: transparent;
   border: solid 2px rgb(73, 73, 73);
   cursor: pointer;
+  margin: 4px;
+  border-radius: 5px;
 }
 
 .Delete:hover {
-  background-color: rgb(233, 61, 61);
+  background-color: rgb(233, 61, 61, 0.7);
+}
+
+.Edit:hover {
+  background-color: rgb(241, 191, 52, 0.7);
 }

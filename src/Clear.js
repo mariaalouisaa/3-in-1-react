@@ -10,10 +10,11 @@ export default function Clear() {
       while (listDiv.firstChild) {
         listDiv.removeChild(listDiv.firstChild);
       }
-      // for some reason this is not deleting the last child! :'(
+      // for some reason this is not deleting the last child
 
       //STILL NEED TO IMPLEMENT REMOVE BUTTON IF NO LIST ITEMS...
-      // setShow(false);
+      //reset button display: block when new item added
+      setShow(false);
     }
   };
 
