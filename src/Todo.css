@@ -19,6 +19,7 @@
   width: 2.5em;
   background-color: transparent;
   border: solid 2px rgb(73, 73, 73);
+  cursor: pointer;
 }
 
 .Delete:hover {

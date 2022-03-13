@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import data from "./todo.json";
+import Clear from "./Clear"
 import "./Todo.css";
 
 export default function Todo(props) {
@@ -49,6 +50,7 @@ export default function Todo(props) {
               );
             })}
           </div>
+          <Clear />
         </form>
       </div>
     );
