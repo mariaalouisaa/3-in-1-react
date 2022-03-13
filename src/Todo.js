@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import data from "./todo.json";
-import Clear from "./Clear"
+import Clear from "./Clear";
 import "./Todo.css";
 
 export default function Todo(props) {
@@ -10,7 +10,7 @@ export default function Todo(props) {
   if (props.active) {
     function handleSubmit(e) {
       e.preventDefault();
-      if(e.target.input.value.length > 1) addItem(e.target.input.value);
+      if (e.target.input.value.length > 1) addItem(e.target.input.value);
     }
 
     function addItem(item) {
@@ -18,13 +18,17 @@ export default function Todo(props) {
     }
 
     const handleToggle = (e) => {
-      console.log(e.target)
+      console.log(e.target);
       setActive(!active);
     };
 
     const deleteItem = (e) => {
-    e.target.parentElement.remove();
-    }
+      e.target.parentElement.parentElement.remove();
+    };
+
+    const editItem = (e) => {
+      console.log("Edit func w/ contenteditable & focus");
+    };
 
     return (
       <div className="Todo popup">
@@ -38,14 +42,29 @@ export default function Todo(props) {
             {toDoList.map((item, index) => {
               return (
                 <div key={`d${index}`} className={"Flex"}>
-                <p
-                  key={`p${index}`}
-                  className={active ? null : "Strike"}
-                  onClick={handleToggle}
-                >
-                  {item}
-                </p>
-                <button key={`b${index}`} className={"Delete"} onClick={deleteItem}>X</button>
+                  <p
+                    key={`p${index}`}
+                    className={active ? null : "Strike"}
+                    onClick={handleToggle}
+                  >
+                    {item}
+                  </p>
+                  <div>
+                    <button
+                      key={`e${index}`}
+                      className={"Delete"}
+                      onClick={editItem}
+                    >
+                      E
+                    </button>
+                    <button
+                      key={`b${index}`}
+                      className={"Delete"}
+                      onClick={deleteItem}
+                    >
+                      X
+                    </button>
+                  </div>
                 </div>
               );
             })}

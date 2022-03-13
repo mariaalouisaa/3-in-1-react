@@ -1,12 +1,29 @@
-import "./clear.css"
+import React, { useState } from "react";
+import "./clear.css";
 
 export default function Clear() {
+  const [show, setShow] = useState(true);
 
-const clearList = (e) => {
-    console.log(e.target)
-}
+  const clearList = (e) => {
+    const listDiv = e.target.previousSibling;
+    if (listDiv.classList.contains("list")) {
+      while (listDiv.firstChild) {
+        listDiv.removeChild(listDiv.firstChild);
+      }
+      // for some reason this is not deleting the last child! :'(
 
-    return (
-        <button className="Clear" onClick={clearList}>CLEAR</button>
-    )
+      //STILL NEED TO IMPLEMENT REMOVE BUTTON IF NO LIST ITEMS...
+      // setShow(false);
+    }
+  };
+
+  return (
+    <button
+      style={{ display: show ? "block" : "none" }}
+      className="Clear"
+      onClick={clearList}
+    >
+      CLEAR
+    </button>
+  );
 }
