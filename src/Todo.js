@@ -6,7 +6,6 @@ import "./Todo.css";
 export default function Todo(props) {
   const [toDoList, setToDoList] = useState(data);
   const [active, setActive] = useState("false");
-  //const [editable, setEditable] = useState(false);
 
   if (props.active) {
     function handleSubmit(e) {
@@ -28,8 +27,8 @@ export default function Todo(props) {
     };
 
     const editItem = (e) => {
-      // setEditable(true);
       console.log("Edit func w/ contenteditable & focus");
+      const textElement = e.target.parentElement.previousSibling;
     };
 
     return (
