@@ -29,6 +29,7 @@ export default function Todo(props) {
     const editItem = (e) => {
       console.log("Edit func w/ contenteditable & focus");
       const textElement = e.target.parentElement.previousSibling;
+      console.log(textElement);
     };
 
     return (
