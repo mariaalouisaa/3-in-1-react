@@ -1,1 +1,18 @@
-["Bake muffins", "Excerise", "Buy cat treats"]
+[
+    {
+    "id": 1,
+    "task": "Bake muffins",
+    "completed": false
+    },
+{
+    "id": 2,
+    "task": "Walk the dog",
+    "completed": true
+},
+{
+    "id": 3,
+    "task": "Water plants",
+    "completed": false
+}
+]
+ 
