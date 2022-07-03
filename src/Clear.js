@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import "./clear.css";
 
 export default function Clear() {
-  const [show, setShow] = useState(true);
+  //const [show, setShow] = useState(true);
 
   const clearList = (e) => {
     const listDiv = e.target.previousSibling;
@@ -10,17 +10,14 @@ export default function Clear() {
       while (listDiv.firstChild) {
         listDiv.removeChild(listDiv.firstChild);
       }
-      // for some reason this is not deleting the last child
 
-      //STILL NEED TO IMPLEMENT REMOVE BUTTON IF NO LIST ITEMS...
-      //reset button display: block when new item added
-      setShow(false);
+      //setShow(false);
     }
   };
 
   return (
     <button
-      style={{ display: show ? "block" : "none" }}
+      // style={{ display: show ? "block" : "none" }}
       className="Clear"
       onClick={clearList}
     >

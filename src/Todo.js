@@ -2,8 +2,6 @@ import React, { useState } from "react";
 import data from "./todo.json";
 import Clear from "./Clear";
 import "./Todo.css";
-import { click } from "@testing-library/user-event/dist/click";
-
 export default function Todo(props) {
   const [toDoList, setToDoList] = useState(data);
   const [input, setInput] = useState("");
@@ -43,8 +41,6 @@ export default function Todo(props) {
         })
       );
     };
-
-    // setToDoList({...toDoList.map((item) => {
 
     const deleteItem = (e) => {
       e.target.parentElement.parentElement.remove();
