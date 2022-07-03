@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "./clear.css";
 
 export default function Clear() {
